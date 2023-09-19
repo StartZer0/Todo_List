@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", loadTasks);
 document.getElementById("add-task").addEventListener("click", addTask);
 document.getElementById("task-list").addEventListener("click", taskAction);
 document.getElementById("task-filter").addEventListener("change", filterTasks);
+document.getElementById("background-color").addEventListener("change", changeBackgroundColor);
 
 function loadTasks() {
     const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
@@ -74,4 +75,24 @@ function removeTask(taskDiv) {
     tasks.splice(taskIndex, 1);
     localStorage.setItem("tasks", JSON.stringify(tasks));
     taskDiv.remove();
+}
+
+function changeBackgroundColor(e) {
+    const color = e.target.value;
+    let bgColor;
+    switch(color) {
+        case "blue":
+            bgColor = "lightblue";
+            break;
+        case "green":
+            bgColor = "lightgreen";
+            break;
+        case "yellow":
+            bgColor = "lightyellow";
+            break;
+        default:
+            bgColor = "lavender";
+            break;
+    }
+    document.body.style.backgroundColor = bgColor;
 }
