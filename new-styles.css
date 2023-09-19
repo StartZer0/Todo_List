@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: lavender;
+    color: navy;
+}
+
+header {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+#task-form input, 
+#task-form button {
+    font-size: 1.2rem;
+    padding: 10px;
+    margin: 5px;
+}
+
+#task-list {
+    list-style-type: none;
+    margin-top: 1rem;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid navy;
+    padding: 10px;
+    margin: 5px;
+}
+
+.done-btn, 
+.delete-btn {
+    cursor: pointer;
+    padding: 8px;
+    border: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
